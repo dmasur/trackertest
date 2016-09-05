@@ -1,6 +1,19 @@
 <html>
 <head>
-  <script type="text/javascript" src="https://www.salesviewer.com/tracker/LE-000498-001.js"></script>
+  <script>
+    function guid() {
+      function s4() {
+        return Math.floor((1 + Math.random()) * 0x10000)
+          .toString(16)
+          .substring(1);
+      }
+      return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
+        s4() + '-' + s4() + s4() + s4();
+    }
+    var uuid = guid();
+    document.write("<script type=\"text/javascript\" src=\"https://www.salesviewer.com/tracker/LE-000498-001.js?sId="+uuid+"\"></script>");
+  </script>
+
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -9,7 +22,7 @@
 
     ga('create', 'UA-83733908-1', 'auto');
     ga('send', 'pageview', {
-      'userId': 'test'
+      'sId': uuid
     });
   </script>
 </head>
