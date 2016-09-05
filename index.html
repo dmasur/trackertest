@@ -10,8 +10,10 @@
       return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
         s4() + '-' + s4() + s4() + s4();
     }
-    uuid = guid();
-    var js = '<script type="text/javascript" src="https://www.salesviewer.com/tracker/LE-000498-001.js?sId=' + uuid + '"></script>'
+    Uuid = guid();
+    var js = '<script type="text/javascript" src="https://www.salesviewer.com/tracker/LE-000498-001.js?sId=';
+    js += Uuid;
+    js += '"></script>';
     document.write(js);
   </script>
 
@@ -25,7 +27,7 @@
 
     ga('create', 'UA-83733908-1', 'auto');
     ga('send', 'pageview', {
-      'sId': uuid
+      'sId': Uuid
     });
   </script>
 </head>
