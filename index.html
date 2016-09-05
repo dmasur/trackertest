@@ -10,7 +10,7 @@
       return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
         s4() + '-' + s4() + s4() + s4();
     }
-    Uuid = sessionStorage.getItem('sId', Uuid);
+    Uuid = sessionStorage.getItem('sId');
     if (!Uuid)
     {
         Uuid = guid();
