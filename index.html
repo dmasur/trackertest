@@ -10,13 +10,13 @@
       return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
         s4() + '-' + s4() + s4() + s4();
     }
-    Uuid = sessionStorage.getItem('sId');
-    if (!Uuid)
+    SalesViewerUuid = sessionStorage.getItem('sId');
+    if (!SalesViewerUuid)
     {
-        Uuid = guid();
-        sessionStorage.setItem('sId', Uuid);
+        SalesViewerUuid = guid();
+        sessionStorage.setItem('SalesViewerUuid', SalesViewerUuid);
     }
-    document.write('<script type="text/javascript" src="https://www.salesviewer.com/tracker/LE-000498-001.js?sId='+Uuid+'"></'+'script>');
+    document.write('<script type="text/javascript" src="https://www.salesviewer.com/tracker/LE-000498-001.js?sId='+SalesViewerUuid+'"></'+'script>');
   </script>
 
   <script>
@@ -26,7 +26,8 @@
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
     })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-    ga('set', 'dimension1', Uuid);
+    ga('set', 'dimension1', SalesViewerUuid);
+    Console.log(SalesViewerUuid);
     ga('create', 'UA-83733908-1', 'auto');
     ga('send', 'pageview');
   </script>
