@@ -29,7 +29,8 @@
 
     console.log(SalesViewerUuid);
     ga('create', 'UA-83733908-1', 'auto');
-    ga('send', 'pageview', {'dimension1': SalesViewerUuid});
+    ga('send', 'pageview');
+    ga('send', 'event', 'Session', 'Id', SalesViewerUuid);
   </script>
 </head>
 <body>
